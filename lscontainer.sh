@@ -25,6 +25,11 @@ then
   echo "    -h  show the help"
   exit 1
 fi
+
+if ! command -v docker >/dev/null 2>&1; then
+    echo "Docker is not installed."
+    exit 1
+fi
  
 # Checks that jq tools are installed
 requisite
